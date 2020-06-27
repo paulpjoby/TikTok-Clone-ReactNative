@@ -3,8 +3,7 @@ import {View, StyleSheet, Text} from 'react-native';
 
 export default function Upload()
 {
-    return 
-    (
+    return (
         <View>
             <Text>Test Upload Page</Text>
         </View>

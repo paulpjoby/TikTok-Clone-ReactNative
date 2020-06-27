@@ -7,7 +7,7 @@ import {
   Text,
   StatusBar,
 } from 'react-native';
-
+import Navigator from './routes/homeStack';
 
 
       // <StatusBar barStyle="dark-content" />
@@ -21,8 +21,6 @@ import {
 export default function App()
 {
   return(
-    <View>
-      <Text> App Js </Text>
-    </View>
+    <Navigator />
   );
 }

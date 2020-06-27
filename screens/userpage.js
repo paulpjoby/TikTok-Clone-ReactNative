@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
 import {View, StyleSheet, Text} from 'react-native';
 
-export default function Login()
+export default function UserPage()
 {
     return(
         <View>
-            <Text>Test Login Page</Text>
+            <Text>Test UserPage Page</Text>
         </View>
     );
 }
