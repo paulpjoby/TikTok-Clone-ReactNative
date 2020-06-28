@@ -23,6 +23,14 @@ export const globalStyles = StyleSheet.create({
         bottom: 0,
         right: 0,
     },
+    videoTouchController: {
+        backgroundColor: '#000',
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        bottom: 0,
+        right: 0,
+    },
     mainPageButtonContainer: {
         position: 'absolute',
         top: Dimensions.get('window').height/3,

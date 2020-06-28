@@ -41,9 +41,13 @@ const screenPages = {
     upload: {
         screen: Upload
     },
-    userPage: {
-        screen: UserPage
-    }
+    // userPage: {
+    //     screen: UserPage, 
+    //     headerMode: 'none',
+    //     navigationOptions: {
+    //         headerShown: false,
+    //     }
+    // }
 }
 
 const homeStack = createStackNavigator(screenPages);
