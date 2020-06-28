@@ -39,7 +39,11 @@ const screenPages = {
         }
     },
     upload: {
-        screen: Upload
+        screen: Upload,
+        headerMode: 'none',
+        navigationOptions: {
+            headerShown: false,
+        }
     },
     // userPage: {
     //     screen: UserPage, 

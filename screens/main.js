@@ -1,23 +1,25 @@
 import React, { useState } from 'react';
 import { View, StyleSheet, Text, TouchableOpacity, SafeAreaView, Image } from 'react-native';
-import Video from 'react-native-video';
-import { globalStyles } from '../styles/global';
-import TextTicker from 'react-native-text-ticker';
-import Icon from 'react-native-vector-icons/FontAwesome';
 import VideoPlayback from '../components/VideosPlayback';
+import convertToProxyURL  from 'react-native-video-cache';
 
 export default class Main extends React.Component {
 
-  state = {
-    isLoading: false,
-    videoList: [],
-    error: null,
-    page: 0,
-    rows: 4
+  constructor(props){
+    super(props)
+    this.state = {
+      isLoading: false,
+      videoList: [],
+      error: null,
+      page: 0,
+      rows: 4
+    }
   }
+  
 
-  getVideosFromServer() {
-    fetch('http://192.168.1.8/tiktok/videos/')
+ async getVideosFromServer() {
+    setTimeout(()=> {
+      fetch('http://192.168.1.8/tiktok/videos/')
       .then(response => response.json())
       .then((responseJson) => {
         this.setState({
@@ -28,6 +30,7 @@ export default class Main extends React.Component {
       .catch(error => {
         this.setState({ error: 'No Network !' });
       })
+    } , 3000);
   }
 
   componentDidMount() {
@@ -39,13 +42,18 @@ export default class Main extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        {this.state.isLoading  && this.state.videoList.length <= 0 ? <Text> Loading Data </Text> : <VideoPlayback videoList={this.state.videoList} />}
+      <View style={styles.loadingData}>
+        {this.state.isLoading  && this.state.videoList.length <= 0 ? <View><Text> Loading Data </Text></View> : <VideoPlayback videoList={this.state.videoList} />}
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
- 
+  loadingData: {
+    marginTop: 'auto',
+    marginBottom: 'auto',
+    alignItems: 'center',
+    justifyContent: 'center',
+  }
 });

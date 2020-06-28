@@ -6,6 +6,7 @@ import Swiper from 'react-native-swiper'
 import TextTicker from 'react-native-text-ticker';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
+
 const VideoPlayback = ({ videoList }) => {
    
     const [currentIndex, setIndex] = useState(0);
@@ -61,7 +62,7 @@ const VideoPlayback = ({ videoList }) => {
                                             bufferForPlaybackMs: 100,
                                             bufferForPlaybackAfterRebufferMs: 500
                                         }}
-                                        source={{ uri: url }}
+                                        source={{ uri:  url}}
                                         paused={Math.abs(index - currentIndex) > 2 || paused}
                                         currentIndex={currentIndex}
                                         muted={currentIndex == index ? false : true}
