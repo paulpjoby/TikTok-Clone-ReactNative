@@ -3,7 +3,7 @@ import {StyleSheet, Dimensions} from 'react-native';
 export const globalStyles = StyleSheet.create({
     mainContainer: {
         width: Dimensions.get('window').width,
-        height: Dimensions.get('window').height,
+        height: "100%",
         backgroundColor: '#f1f1f1'
     },
     centerContainer :{

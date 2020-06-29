@@ -112,7 +112,7 @@ export default class Login extends  React.Component
                 </View>
                 <View style={styles.skipButton}>
                     <TouchableOpacity style={{flexDirection: 'row', alignItems: 'center'}} 
-                        onPress={() => { this.props.navigation.replace('main'); }}
+                        onPress={() => { this.props.navigation.replace('home'); }}
                         >
                                 <Text style={styles.skipButtonText}>SKIP  </Text> 
                                 <Icon5 name="play" color="#fff" size={14}/>
@@ -185,6 +185,7 @@ const styles = StyleSheet.create({
         color: '#fff',
     },
     skipButton:{
+        display: 'none',
         position: 'absolute',
         top: 0,
         right: 0,

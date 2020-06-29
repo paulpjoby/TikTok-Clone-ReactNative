@@ -4,8 +4,8 @@ import Loading from '../screens/loading';
 import Main from '../screens/main';
 import Login from '../screens/login';
 import Register from '../screens/register';
-import Upload from '../screens/upload';
 import UserPage from '../screens/userpage';
+import Home from '../screens/home';
 
 
 const screenPages = {
@@ -38,20 +38,20 @@ const screenPages = {
             headerShown: false,
         }
     },
-    upload: {
-        screen: Upload,
+    home: {
+        screen: Home,
         headerMode: 'none',
         navigationOptions: {
             headerShown: false,
         }
     },
-    // userPage: {
-    //     screen: UserPage, 
-    //     headerMode: 'none',
-    //     navigationOptions: {
-    //         headerShown: false,
-    //     }
-    // }
+    userPage: {
+        screen: UserPage, 
+        headerMode: 'none',
+        navigationOptions: {
+            headerShown: false,
+        }
+    }
 }
 
 const homeStack = createStackNavigator(screenPages);

@@ -134,7 +134,7 @@ export default class Login extends  React.Component
                             <Text style={styles.textSign}> Create Account </Text>
                     </TouchableOpacity>
                 </View>
-                <View style={styles.skipButton}>
+                <View style={{display: 'none'}}>
                     <TouchableOpacity style={{flexDirection: 'row', alignItems: 'center'}}
                         onPress = {() => {this.props.navigation.pop()}}
                         >
